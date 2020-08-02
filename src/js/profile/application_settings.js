@@ -204,7 +204,7 @@ export const allApplicationSettings = [
                 applyGameTheme(id);
                 document.documentElement.setAttribute("data-theme", id);
             },
-        enabled: !IS_DEMO,
+        enabled: !IS_STANDALONE,
     }),
 
     new EnumSetting("autosaveInterval", {
@@ -227,7 +227,7 @@ export const allApplicationSettings = [
         category: enumCategories.advanced,
         restartRequired: false,
         changeCb: (app, id) => {},
-        enabled: !IS_DEMO,
+        enabled: !IS_STANDALONE,
     }),
 
     new EnumSetting("scrollWheelSensitivity", {
